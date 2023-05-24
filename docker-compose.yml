@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  nginx_urjc:
+    image: neree00/nginxurjc:0.1
+    ports:
+      - 81:80
+    env_file:
+      - .env
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/html:/usr/share/nginx/html:ro
+    container_name: nginxurjc_1
+
+  database:
+    image: mysql:8.0.33-debian
+    env_file:
+      - .env
+    volumes:
+      - ./db_data:/var/lib/mysql
+    container_name: nginxurjc_2
+  backend_fastapi:
+    image: neree00/backendurjc:0.1
+    volumes:
+      - ./app.env:/code/app.env
+    env_file:
+      - .env
+    ports:
+      - 80:80
+
+  adminer:
+    image: adminer
+    ports:
+      - 8080:8080

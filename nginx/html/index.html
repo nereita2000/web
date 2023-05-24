@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurante URJC</title>
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body>
+        <header>
+            <h1>Restaurante URJC</h1>
+        </header>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menu</a>
+            <a href="#reservas">Reservas</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+        <section id="inicio">
+            <h2>Bienvenidos al Restaurante de la URJC</h2>
+            <p>Disfruta de los mejores platos en un ambiente acogedor y con un servicio excepcional. Todos los alumnos disf>
+            <img src="restauranteurjc.jpg" alt="Foto resturante Urjc">
+        </section>
+
+        <section id="menu">
+        <h1>Menu de Comida</h1>
+
+        <ul>
+            <li>
+            <h3>Entradas</h3>
+            <ul>
+                <li>Ensalada Cesar - 8euros</li>
+                <li>Sopa del Dia - 8euros</li>
+                <li>Calamares Fritos - 10euros</li>
+            </ul>
+            </li>
+
+            <li>
+            <h3>Platos Principales</h3>
+            <ul>
+                <li>Filete de Ternera - 18euros</li>
+                <li>Salmon a la Parrilla - 16euros</li>
+                <li>Pasta Alfredo - 12euros</li>
+            </ul>
+            </li>
+
+            <li>
+            <h3>Extras</h3>
+            <ul>
+                <li>Pure de Patatas - 6euros</li>
+                <li>Verduras Salteadas - 7euros</li>
+                <li>Arroz Blanco - 5euros</li>
+
+                </ul>
+            </li>
+
+            <li>
+            <h3>Postres</h3>
+            <ul>
+                <li>Tarta de Chocolate - 7euros</li>
+                <li>Helado de Vainilla - 5euros</li>
+                <li>Frutas de Temporada - 6euros</li>
+            </ul>
+            </li>
+
+            <li>
+            <h3>Bebidas</h3>
+            <ul>
+                <li>Refresco - 2euros</li>
+                <li>Agua Mineral - 1.5euros</li>
+            </ul>
+            </li>
+        </ul>
+        <p>Los precios estan igual en todos los campus.</p>
+        <p>Buen provecho</p>
+        </section>
+
+        <section id="reservas">
+            <h2>Reservas</h2>
+            <p>Realiza una reserva para asegurarte un lugar en el restaurante de la universidad</p>
+            <form method = 'post' action="http://192.168.15.5:80/guardar">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required><br><br>
+
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required><br><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora" required><br><br>
+
+            <label for="personas">Numero de personas:</label>
+            <input type="number" id="personas" name="personas" required><br><br>
+
+            <label for="email">Correo electronico:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            
+            <label for="telefono">Telefono:</label>
+            <input type="text" id="telefono" name="telefono" required><br><br>
+            
+            <label for="campus">Campus:</label>
+            <select id="campus" name="campus" required>
+                <option value="">Seleccionar</option>
+                <option value="mostoles">Mostoles</option>
+                <option value="fuenlabrada">Fuenlabrada</option>
+            </select>
+
+            <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Para cualquier consulta o informacion adicional, contactanos:</p>
+            <p>Telefono: 914 88 93 93</p>
+            <p>Email: info@restauranteurjc.es</p>
+        </section>
+
+        <footer>
+            <p>&copy; 2023 Restaurante URJC</p>
+        </footer>
+    </body>
+</html>
