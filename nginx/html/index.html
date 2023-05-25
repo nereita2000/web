@@ -81,32 +81,32 @@
             <h2>Reservas</h2>
             <p>Realiza una reserva para asegurarte un lugar en el restaurante de la universidad</p>
             <form method = 'post' action="http://192.168.15.5:80/guardar">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
 
-            <label for="fecha">Fecha:</label>
-            <input type="date" id="fecha" name="fecha" required><br><br>
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required><br><br>
 
-            <label for="hora">Hora:</label>
-            <input type="time" id="hora" name="hora" required><br><br>
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" name="hora" required><br><br>
 
-            <label for="personas">Numero de personas:</label>
-            <input type="number" id="personas" name="personas" required><br><br>
+                <label for="personas">Numero de personas:</label>
+                <input type="number" id="personas" name="personas" required><br><br>
 
-            <label for="email">Correo electronico:</label>
-            <input type="text" id="email" name="email" required><br><br>
-            
-            <label for="telefono">Telefono:</label>
-            <input type="text" id="telefono" name="telefono" required><br><br>
-            
-            <label for="campus">Campus:</label>
-            <select id="campus" name="campus" required>
-                <option value="">Seleccionar</option>
-                <option value="mostoles">Mostoles</option>
-                <option value="fuenlabrada">Fuenlabrada</option>
-            </select>
+                <label for="email">Correo electronico:</label>
+                <input type="text" id="email" name="email" required><br><br>
+                
+                <label for="telefono">Telefono:</label>
+                <input type="text" id="telefono" name="telefono" required><br><br>
+                
+                <label for="campus">Campus:</label>
+                <select id="campus" name="campus" required>
+                    <option value="">Seleccionar</option>
+                    <option value="mostoles">Mostoles</option>
+                    <option value="fuenlabrada">Fuenlabrada</option>
+                </select>
 
-            <button type="submit">Enviar</button>
+                <button type="submit">Enviar</button>
             </form>
         </section>
 
@@ -115,6 +115,19 @@
             <p>Para cualquier consulta o informacion adicional, contactanos:</p>
             <p>Telefono: 914 88 93 93</p>
             <p>Email: info@restauranteurjc.es</p>
+            <h2>Formulario de Contacto</h2>
+            <form  method = 'post' action="http://192.168.15.5:80/contactar">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" required></textarea><br><br>
+
+                <input type="submit" value="Enviar">
+            </form>    
         </section>
 
         <footer>
