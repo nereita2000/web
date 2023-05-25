@@ -16,6 +16,8 @@ services:
     image: mysql:8.0.33-debian
     env_file:
       - .env
+    environment
+      - MYSQL_ROOT_PASSWORD=${PWDROOTDB}
     volumes:
       - ./db_data:/var/lib/mysql
     container_name: nginxurjc_2
