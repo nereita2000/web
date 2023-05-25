@@ -16,7 +16,7 @@ services:
     image: mysql:8.0.33-debian
     env_file:
       - .env
-    environment
+    environment:
       - MYSQL_ROOT_PASSWORD=${PWDROOTDB}
     volumes:
       - ./db_data:/var/lib/mysql
