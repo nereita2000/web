@@ -142,6 +142,4 @@ async def guardar(request: Request):
     # Envío del correo electrónico
     with smtplib.SMTP(smtp_server, smtp_port) as servidor:
         servidor.sendmail(origen, destinatario, mensaje.as_string())
-
-    print('El correo ha sido enviado correctamente.')
-
+    return{"message": "Datos guardados correctamente"}
