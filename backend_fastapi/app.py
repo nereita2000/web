@@ -90,13 +90,37 @@ async def guardar(request: Request):
     mensaje2 = form_data["mensaje"]
 
     
-    #Leemos configuracion
+#Leemos configuracion
 
     config = configparser.ConfigParser()
 
     config.read('/code/app.env')
 
+#Tomamos los valores del fichero de variables
+    nombre2 = config.get('DB', 'DBNAME')
+    contra = config.get('DB', 'PWDROOTDB')
+    rt = config.get('DB', 'ROOTDB')
+    usuario = config.get('DB','USERDB')
     mail = config.get('MAIL','ip')
+
+    # Conexión a la base de datos
+    conn = mysql.connector.connect(
+        host="database",  # generalmente es 'localhost'
+        database=nombre2,
+        user=usuario,
+        password=rt
+    )
+    cursor = conn.cursor()
+
+    # Insertar los datos en la base de datos
+    query = "INSERT INTO contacto (nombre, email, mensaje) VALUES (%s, %s, %s)"
+    cursor.execute(query, (nombre,email,mensaje2))
+
+    # Guardar los cambios y cerrar la conexión
+    conn.commit()
+    cursor.close()
+    conn.close()
+
     #Enviamos correo de confirmación
     # Configuración del servidor SMTP y del correo electrónico
     smtp_server = mail
